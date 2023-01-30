@@ -21,14 +21,14 @@ public class Task2 {
         ArrayList<Integer> listNum = new ArrayList<>();                       //на основе полученных данных от пользователя
         Random random = new Random();
         for (int i = 0; i < size; i++) {
-            listNum.add(random.ints(min, (max + 1)).findFirst().getAsInt());
+            listNum.add(random.nextInt(min, max+1));
         }
-        System.out.println("НАЧАЛЬНЫЙ СПИСОК:" + listNum);
+        System.out.println("НАЧАЛЬНЫЙ СПИСОК:     " + listNum);
         return listNum;
     }
     static void removeEvenNumList(ArrayList<Integer> numList){ //удаление четных чисел из списка
         numList.removeIf(integer -> integer % 2 == 0);
-        System.out.println("УДАЛЕНЫ ЧЕТНЫЕ: " + numList);
+        System.out.println("УДАЛЕНЫ ЧЕТНЫЕ ЧИСЛА: " + numList);
     }
 }
 
